@@ -3,16 +3,23 @@ section {
 }
 
 h1,
-.fancy-header { /*multiple selector */
-    color: purple;
+.fancy-header {
+    color: ;
+    text-align: center;
+}
+
+h2 {
+    color: blue;
+    text-decoration: underline;
 }
 
 .fancy-header {
-    color: purple;
+    color: ;
     text-decoration: underline;
-    background-color: brown;
+    background-color: ;
 }
 
 #main-title {
     background-color:aqua;
 }
+
