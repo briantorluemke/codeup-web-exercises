@@ -1,25 +1,1 @@
-section {
-    background-color: beige;
-}
-
-h1,
-.fancy-header {
-    color: ;
-    text-align: center;
-}
-
-h2 {
-    color: blue;
-    text-decoration: underline;
-}
-
-.fancy-header {
-    color: ;
-    text-decoration: underline;
-    background-color: ;
-}
-
-#main-title {
-    background-color:aqua;
-}
-
+section {    background-color: beige;}h1,.fancy-header {    /*color: ;*/    text-align: center;}h2 {    color: blue;    text-decoration: underline;}.fancy-header {    /*color: ;*/    text-decoration: underline;    /*background-color: ;*/}#main-title {    background-color:aqua;}
