@@ -1,4 +1,18 @@
+section {
+    background-color: beige;
+}
+
+h1,
+.fancy-header { /*multiple selector */
+    color: purple;
+}
+
 .fancy-header {
-    color: blue;
+    color: purple;
     text-decoration: underline;
+    background-color: brown;
+}
+
+#main-title {
+    background-color:aqua;
 }
