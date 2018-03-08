@@ -4,10 +4,9 @@ h1{
 }
 
 #rib {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    left: 1300px;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .box {
@@ -54,7 +53,7 @@ div {
     color: white;
 }
 
-img {
+div>img {
     position: absolute;
     bottom: 50px;
     left: 50px;
