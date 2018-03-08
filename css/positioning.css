@@ -1,3 +1,15 @@
+h1{
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+#rib {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 1300px;
+}
+
 .box {
     border: 1px solid black;
     height: 50px;
