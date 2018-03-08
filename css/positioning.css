@@ -2,6 +2,41 @@
     border: 1px solid black;
     height: 50px;
     width: 50px;
-    margin: 50px;
+    margin: 25px 25px 25px 25px;
+    padding: 10px;
+}
+
+#red {
     float: left;
+    background-color: #E8101A;
+}
+
+#orange {
+    float: left;
+    background-color: #F1AE10;
+}
+
+#yellow {
+    float: left;
+    background-color: #F9FF00;
+}
+
+#green {
+    float: left;
+    clear: left;
+    background-color: #3E9400;
+}
+
+#blue {
+    float: left;
+    background-color: #4405FF;
+}
+
+#pink {
+    float: left;
+    background-color: #EF72F1;
+}
+
+div {
+    color: white;
 }
