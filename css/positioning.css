@@ -4,6 +4,7 @@
     width: 50px;
     margin: 25px 25px 25px 25px;
     padding: 10px;
+    position: relative;
 }
 
 #red {
@@ -39,4 +40,10 @@
 
 div {
     color: white;
+}
+
+img {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
 }
