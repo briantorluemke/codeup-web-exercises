@@ -1,0 +1,42 @@
+header {
+    background-color: #000;
+    color: #fff;
+}
+
+.top-nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.main-nav {
+    color: #FAFBFC;
+}
+
+.main-nav-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.tab-link {
+    color: #444;
+    text-decoration: none;
+}
+
+table{
+    border: solid 1px #aaa;
+
+}
+
+.title-row {
+    background-color: #F6F8FA;
+}
