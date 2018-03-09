@@ -1,0 +1,47 @@
+body {
+    font-family: Trebuchet MS, sans-serif;
+
+}
+
+td {
+    width: 20%;
+    background-color: #999f8e;
+    vertical-align: top;
+
+}
+
+#menu {
+    padding: 10px:
+    margin: 10px;
+    color: white;
+}
+
+hr {
+    width: 67px;
+    padding: 0;
+    margin: 0;
+}
+
+div>a {
+    float: left;
+}
+
+#bod {
+    float: left;
+    background-color: #3E9400;
+    width: 40%;
+    vertical-align: top;
+    height: 100%;
+}
+
+#grid {
+    float: left;
+    border: 1px solid black;
+    height: 100%;
+    width: 5%;
+    margin: 0;
+    padding: 40px 5px 40px 5px;
+    position: relative;
+    background-color: #E8101A;
+
+}
