@@ -1,0 +1,46 @@
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    text-align: center;
+    background-color: #E1E1E1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.one-half {
+    width: 50%;
+}
+
+.one-third {
+    width: 33.33%;
+}
+
+.one-fourth {
+    width: 25%;
+}
+
+.one-sixth {
+    width: 16.66%;
+}
+
+.one-eighth {
+    width: 12.5%;
+}
+
+.row {
+    width: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
