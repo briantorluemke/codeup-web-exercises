@@ -46,6 +46,30 @@
     clear: both;
 }
 
+.off-one-half, .off-two-fourth, .off-three-sixth {
+    margin-left: 50%;
+    width: 50%;
+}
+
+.off-one-third {
+    margin-left: 33.33%;
+    width: 66.66%
+}
+
+.off-two-third {
+    margin-left: 66.66%;
+    width: 33.33%;
+}
+
+.off-one-fourth {
+    margin-left: 25%;
+    width: 75%;
+}
+
+.off-three-eighth {
+    margin-left: 37.5%;
+    width: 62.5%;
+}
 @media screen and (max-width: 768px) {
     .one-third, .one-half, .one-sixth, .one-eighth, .one-fourth {
         width: 100%;
