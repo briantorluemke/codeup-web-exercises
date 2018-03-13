@@ -1,7 +1,7 @@
 .jumbotron {
     position: relative;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .bgpic {
@@ -20,3 +20,23 @@
     /*background-color: #0F6CFF;*/
     /*color: white;*/
 /*}*/
+
+h1 {
+    text-align: center;
+    background-color: white;
+    opacity: 0.6;
+    width: 100%;
+}
+
+/*div.card-header {*/
+    /*color: white;*/
+    /*background-color: #0F6CFF;*/
+/*}*/
+
+.float {
+    float:right;
+}
+
+.card-footer {
+    border: 1px #DFDFDF;
+}
