@@ -3,3 +3,20 @@
     text-align: center;
     color: white;
 }
+
+.bgpic {
+    background-image: url("http://java.codeup.com/examples/bootstrap/pizza.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.badge-light {
+    color: white;
+    background-color: #939393;
+}
+
+/*.card-header {*/
+    /*background-color: #0F6CFF;*/
+    /*color: white;*/
+/*}*/
