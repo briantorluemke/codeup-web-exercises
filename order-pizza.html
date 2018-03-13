@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Your custom styles go here -->
     <style>
+        .bgpic {
+            background-image: url("http://java.codeup.com/examples/bootstrap/pizza.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .badge-light {
+            color: white;
+            background-color: #939393;
+        }
 
     </style>
 </head>
@@ -27,8 +37,21 @@
     <!-- Main page content -->
     <main>
         <div class="container">
-            <div class="jumbotron">
-                <img src="img/pizza.png" alt="Pizza">
+            <div class="jumbotron bgpic">
+                <h1 class="display-4">Hello, world!</h1>
+            </div>
+            <div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><span class="badge badge-light">1</span>Size and crust</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="badge badge-light">2</span>Cheese and Sauce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="badge badge-light">3</span>Toppings</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </main>
