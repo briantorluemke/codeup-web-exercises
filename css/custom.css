@@ -2,6 +2,8 @@
     position: relative;
     text-align: center;
     color: black;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .bgpic {
@@ -39,4 +41,9 @@ h1 {
 
 .card-footer {
     border: 1px #DFDFDF;
+}
+
+.header{
+    margin-left:5px;
+    width:100%;
 }

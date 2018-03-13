@@ -5,6 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Customize your Pizza!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/custom.css">
 </head>
@@ -17,29 +18,31 @@
                 <a class="navbar-brand" href="#">Menu</a>
                 <input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
                 <button type="button" class="btn btn-light btn-hover">Search stores near you!</button>
+                <button type="button" class="pull-right btn btn-light">Sign up</button>
             </form>
         </nav>
     </header>
     <!-- Main page content -->
     <main>
         <div class="container">
-            <div class="jumbotron bgpic">
-                <h1 class="display-4">Hello, world!</h1>
+            <div class="jumbotron bgpic d-none d-md-block">
+                <h1 class="display-4">Welcome to Pizza World!</h1>
             </div>
             <div>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#"><span class="badge badge-light">1</span>Size and crust</a>
+                        <a class="nav-link active" href="#step1"><span class="badge badge-light">1</span>Size and crust</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="badge badge-light">2</span>Cheese and Sauce</a>
+                        <a class="nav-link" href="#step2"><span class="badge badge-light">2</span>Cheese and Sauce</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="badge badge-light">3</span>Toppings</a>
+                        <a class="nav-link" href="#step3"><span class="badge badge-light">3</span>Toppings</a>
                     </li>
                 </ul>
             </div>
             <div class="card">
+                <a name="step1"></a>
                 <div class="card-header">
                     Choose Size and Crust
                 </div>
@@ -76,6 +79,7 @@
             </div>
             <br>
             <div class="card">
+                <a name="step2"></a>
                 <div class="card-header">
                     Choose Cheese and Sauce
                 </div>
@@ -135,6 +139,7 @@
             </div>
 
                             <br>
+            <a name="step3"></a>
                         <div class="card">
                             <div class="card-header">
                                 Choose Toppings
@@ -156,16 +161,19 @@
                                 <div class="card-body">
                                     <div class="card">
                                         <div class="card-header">
-                                            Choose Meats
+                                            Choose non-meats
                                         </div>
                                         <ul class="list-group">
-                                            <li class="list-group-item"><input type="checkbox" class="m-2" id="defaultCheck1" title="beef">Beef</li>
-                                            <li class="list-group-item"><input type="checkbox" class="m-2" id="defaultCheck1" title="ham">Ham</li>
-                                            <li class="list-group-item"><input type="checkbox" class="m-2" id="defaultCheck1" title="Philly Steak">Philly Steak</li>
-                                            <li class="list-group-item"><input type="checkbox" class="m-2" id="defaultCheck1" title="Bacon">Bacon</li>
+                                            <li class="list-group-item"><input type="checkbox" class="m-2" id="defaultCheck1" title="green peppers">Green Peppers</li>
+                                            <li class="list-group-item"><input type="checkbox" class="m-2" id="defaultCheck1" title="mushrooms">Mushrooms</li>
+                                            <li class="list-group-item"><input type="checkbox" class="m-2" id="defaultCheck1" title="onions">Onions</li>
+                                            <li class="list-group-item"><input type="checkbox" class="m-2" id="defaultCheck1" title="jalapeno peppers">Jalapeno Peppers</li>
                                         </ul>
                                     </div>
                                 </div>
+                            <div class="card-footer text-muted">
+                                <p class="text-right"><button type="button" class="btn btn-primary">Checkout <i class="fa fa-shopping-cart"></i></button></p>
+                            </div>
                             <br>
                         </div>
         </div>
