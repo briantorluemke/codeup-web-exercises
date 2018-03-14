@@ -18,10 +18,6 @@
     background-color: #939393;
 }
 
-/*.card-header {*/
-    /*background-color: #0F6CFF;*/
-    /*color: white;*/
-/*}*/
 
 h1 {
     text-align: center;
@@ -30,10 +26,9 @@ h1 {
     width: 100%;
 }
 
-/*div.card-header {*/
-    /*color: white;*/
-    /*background-color: #0F6CFF;*/
-/*}*/
+.bgblue {
+    background-color: #D5EEF8;
+}
 
 .float {
     float:right;
