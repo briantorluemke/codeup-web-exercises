@@ -8,16 +8,29 @@
 //  * Example
 //  * > sayHello("codeup") // returns "Hello, codeup!"
 //  */
-//
-//
-// function sayHello(name) {
-//     return "Hello " + name;
-// }
-// var name = "Brian";
-//
-// console.log(sayHello(name));
-//
-//
+
+
+function enterPassword() {
+    var userPassword = prompt("What is the password")
+    return (userPassword = "koala")
+}
+
+if(enterPassword()) {
+    console.log("congratulations!")
+} else {
+    var userPassword = prompt("Try again hahaha")
+}
+
+
+
+function sayHello(name) {
+    return "Hello " + name;
+}
+var name = "Brian";
+
+console.log(sayHello(name));
+
+
 // /**
 //  * TODO:
 //  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -25,29 +38,29 @@
 //  *
 //  * console.log 'helloMessage' to check your work
 //  */
-//
-//
-// sayHello("Brian");
-// var helloMessage = sayHello("Brian");
-// console.log(helloMessage);
-//
-//
-//
+
+
+sayHello("Brian");
+var helloMessage = sayHello("Brian");
+console.log(helloMessage);
+
+
+
 // /**
 //  * TODO:
 //  * Store your name as a string in a variable named 'myName', and pass that
 //  * variable to the 'sayHello' function. You should see the same output in the
 //  * console.
 //  */
-//
-// var myName ="Brian";
-// console.log(sayHello(myName));
-//
-//
+
+var myName ="Brian";
+console.log(sayHello(myName));
+
+
 // // Don't modify the following line, it generates a random number between 1 and 3
 // // and stores it in a variable named random
-// var random = Math.floor((Math.random() * 3) + 1);
-//
+var random = Math.floor((Math.random() * 3) + 1);
+
 // /**
 //  * TODO:
 //  * Create a function called 'isTwo' that takes a number as a parameter.
@@ -65,16 +78,16 @@
 //  * different result everytime you refresh the page if you are using the random
 //  * number)
 //  */
-//
-// function isTwo(x) {
-//     return (x === 2);
-// }
-//
-//
-// console.log(isTwo(random));
-// console.log(isTwo(2));
-//
-//
+
+function isTwo(x) {
+    return (x === 2);
+}
+
+
+console.log(isTwo(random));
+console.log(isTwo(2));
+
+
 // /**
 //  * TODO:
 //  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -86,30 +99,30 @@
 //  * > calculateTip(0.25, 25.50) // returns 6.37
 //  * > calculateTip(0.15, 33.42) // returns 5.013
 //  */
-//
-// function calculateTip(x , y) {
-//     return x*y;
-// }
-//
-// console.log(calculateTip(0.15 , 33.42));
-//
-//
+
+function calculateTip(x , y) {
+    return x*y;
+}
+
+console.log(calculateTip(0.15 , 33.42));
+
+
 // /**
 //  * TODO:
 //  * Use prompt and alert in combination with your calculateTip function to
 //  * prompt the user for the bill total and a percentage they would like to tip,
 //  * then display the dollar amount they should tip
 //  */
-//
-// var tipAmount = prompt("What percentage of your bill would you like to tip?");
-//  console.log("User is tipping " + tipAmount + "% of the bill");
-// var billTotal = prompt("How much was your total bill?");
-// console.log("User is paying $" + billTotal + " for the bill.");
-//  var tipFinal = calculateTip(tipAmount ,  billTotal);
-//  alert("You should tip $" + tipFinal);
-// console.log("user is tipping $" + tipFinal);
-//
-//
+
+var tipAmount = prompt("What percentage of your bill would you like to tip?");
+ console.log("User is tipping " + tipAmount + "% of the bill");
+var billTotal = prompt("How much was your total bill?");
+console.log("User is paying $" + billTotal + " for the bill.");
+ var tipFinal = calculateTip(tipAmount ,  billTotal);
+ alert("You should tip $" + tipFinal);
+console.log("user is tipping $" + tipFinal);
+
+
 // /**
 //  * TODO:
 //  * Create a function named `applyDiscount`. This function should accept a price
@@ -191,7 +204,7 @@ console.log(decrement(3043));
 // Write a function named hasSpaces that accepts a string and returns true if the string contains any space characters
 
 function hasSpaces(spaceString) {
-   return (spaceString.indexOf(" ") >= 1)
+   return (spaceString.indexOf(" ") >= 0)
 }
 
 
@@ -245,4 +258,6 @@ function isValidPassword(password) {
 
 // A triangle with sides a, b, and c is a right triangle iff a squared plus b squared is equal to c squared. Write a function named isRightTriangle with parameters a, b, and c that will be numbers, and that tells if the passed sides can make a right triangle (returns a boolean).
 
-
+function isRightTriangle(a, b, c) {
+    return square(a) + square(b) === square(c);
+}
