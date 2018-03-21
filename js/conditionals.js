@@ -16,6 +16,28 @@
  * Can you refactor your code to use functions?
  */
 
+var enterNumber = confirm("Would you like to enter a number?");
+
+if (enterNumber) {
+        var number = prompt("Enter a number!");
+        parseInt(number);
+        var evenNumber = number % 2 === 0;
+        if (evenNumber) {
+            alert("Your number is even.")
+        } else {
+            alert("Your number is odd.")
+        }
+        var plus100 = number + 100;
+        alert (plus100);
+
+
+
+} else {
+    alert("Fine then.")
+}
+
+
+
 /* ########################################################################## */
 
 /**
