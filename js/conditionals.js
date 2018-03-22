@@ -68,22 +68,26 @@
  * console.logging the function's return value
  */
 
-// function analyzeColor(x) {
-//     var colorBlue = (x === "blue");
-//     var colorRed = (x === "red");
-//     var colorCyan = (x === "cyan");
-//     console.log(x);
-//     if (colorBlue) {
-//         alert("Blue is the color of the sky.")
-//     } else if (colorRed) {
-//         alert("Strawberries are red")
-//     } else if (colorCyan) {
-//         alert("I don't know anything about cyan.")
-//     } else {
-//         alert ("Sorry, I don't know anything about that color (if it's even a color).")
-//     }
-//
-// }
+function analyzeColor(x) {
+    var colorBlue = (x === "blue");
+    var colorRed = (x === "red");
+    var colorCyan = (x === "cyan");
+    console.log(x);
+    if (colorBlue) {
+        alert("Blue is the color of the sky.")
+    } else if (colorRed) {
+        alert("Strawberries are red")
+    } else if (colorCyan) {
+        alert("I don't know anything about cyan.")
+    } else {
+        alert ("Sorry, I don't know anything about that color (if it's even a color).")
+    }
+
+}
+
+
+
+    analyzeColor(colors);
 
 
 
@@ -181,7 +185,7 @@ function calculateTotal(y , z) {
             totalPrice = z * 0.9;
             break;
         case (2):
-            totalPrice = z * 0.75;
+            totalPrice = z * 0.75; //25%
             break;
         case (3):
             totalPrice = z * 0.65;
