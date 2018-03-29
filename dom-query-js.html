@@ -52,26 +52,24 @@
 
         button2.addEventListener("click", function() {
             subHeader.style.color = "blue";
+            console.log("User made 'Hello Again' Blue at " + parseInt(event.timeStamp) + " milliseconds.")
         });
 
         button3.addEventListener("click", function () {
+            console.log("User changed every other 'Item' color at " + parseInt(event.timeStamp) + " milliseconds.")
             for (var i = 0; i < 5; i += 2) {
                 listItems[i].style.color = "grey";
             }
         });
 
         button4.addEventListener("click", function () {
-            for (var y = 0; y < listItems.length; y++) {
-                var dbId = listItems[0].getAttribute('data-dbid');
-                if (listItems[y].getAttribute('data-dbid') === dbId) {
-                    listItems[y].style.color = "blue";
-                }
-
-            }
+            console.log("User made the top 'Item' Blue at " + parseInt(event.timeStamp) + " milliseconds.")
+            listItems[0].style.color = "blue";
         });
 
         button5.addEventListener("click", function () {
             subParagraphs.innerText = "Mission Accomplished!";
+            console.log("User accomplished the mission at " + parseInt(event.timeStamp) + " milliseconds!")
         });
 
     })();
