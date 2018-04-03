@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps</title>
+    <style>
+        #map-canvas {
+            width: 500px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="map-canvas"></div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDav930EJ-IgdQ1VmvdbOlmU2QulAJmXK4"></script>
+<script>
+    var mapOptions = {
+        zoom: 13,
+        center : {
+            lat: 29.426791,
+            lng: -98.489602
+        }
+    };
+    var mapCanvas = document.getElementById("map-canvas");
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var geocoder = new google.maps.Geocoder();
+    var address = {
+        address: "300 Alamo Plaza, San Antonio, TX, 78205"
+    };
+    function callback(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            console.log(results);
+            map.setCenter(results[0].geometry.location);
+        } else {
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+    }
+    geocoder.geocode(address, callback);
+</script>
+</body>
+</html>
