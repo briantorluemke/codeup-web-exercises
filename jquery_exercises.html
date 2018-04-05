@@ -21,7 +21,12 @@
 
     <script type="text/javascript" src="js/jquery.js"></script>
 <script>
-    $(".codeup").css('border', '1px solid #F00');
+    var one = $("h1");
+    var two = $("p");
+    var three = $("li");
+    three.css("font-size", "20px");
+    alert(one.text());
+    var combo = $(one, two, three);
 </script>
 </body>
 </html>
