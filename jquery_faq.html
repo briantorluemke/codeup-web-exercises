@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+        .high {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<button class="me">Hide some of the things!</button>
+<dl>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 1 about national parks</dd>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 2 about national parks</dd>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 3 about national parks</dd>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 4 about national parks</dd>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 5 about national parks</dd>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 6 about national parks</dd>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 7 about national parks</dd>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 8 about national parks</dd>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 9 about national parks</dd>
+    <dt>National Parks stuff:</dt>
+    <dd class="invisible">Fact 10 about national parks</dd>
+</dl>
+<script src="js/jquery.js"></script>
+<script>
+    $(".me").click(function (e) {
+        e.preventDefault();
+        $("dd").toggleClass("invisible");
+    });
+    $("dt").click(function () {
+        $(this).toggleClass("high")
+    })
+</script>
+</body>
+</html>

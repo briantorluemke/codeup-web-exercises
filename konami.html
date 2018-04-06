@@ -4,8 +4,8 @@
     <title>Konami Code</title>
 </head>
 <body>
-<h1>Konami Code</h1>
-<p>Do u kno de wae?</p>
+<h1 style="text-align: center">Konami Code</h1>
+<p style="text-align: center">Do u kno de wae?</p>
 <div class="fill"></div>
 <div class="fill2"></div>
 <script src="js/jquery.js"></script>
@@ -19,8 +19,8 @@
         user.push(e.keyCode);
         if (user.toString().indexOf(konami) >= 0) {
             alert("Whoa!");
-            $(".fill").html('<img src="https://avatars0.githubusercontent.com/u/3099338?s=460&v=4">').css("height", "100%");
-            $(".fill2").html('<h1>YOU KNOW DE WAE</h1>');
+            $(".fill").html('<img src="https://avatars0.githubusercontent.com/u/3099338?s=460&v=4">').css("text-align", "center");
+            $(".fill2").html('<h1>YOU KNOW DE WAE</h1>').css("text-align", "center");
             user = [];
         }
     });
