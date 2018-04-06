@@ -8,7 +8,7 @@
 <h1 class="codeup">jQuery Exercise</h1>
 <p class="codeup2">Hello</p>
 <ul>
-    <li id="things1" class="codeup">I'm</li>
+    <li id="things1">I'm</li>
     <li id="things2">Doing</li>
     <li id="things3">jQuery</li>
     <li id="things4">Stuff</li>
@@ -27,6 +27,13 @@
 
     $(".codeup2").dblclick(function () {
         $(".codeup2").css("font-size", "18px")
+    });
+
+    $("li").hover(function () {
+        $(this).css("color", "red")
+    },
+    function () {
+        $(this).css("color", "black")
     });
 
 </script>
