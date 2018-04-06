@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1 class="codeup">jQuery Exercise</h1>
-<p class="codeup">Hello</p>
+<p class="codeup2">Hello</p>
 <ul>
     <li id="things1" class="codeup">I'm</li>
     <li id="things2">Doing</li>
@@ -23,7 +23,12 @@
 <script>
     $(".codeup").click(function () {
         $(".codeup").css("background-color", "blue");
-    })
+    });
+
+    $(".codeup2").dblclick(function () {
+        $(".codeup2").css("font-size", "18px")
+    });
+
 </script>
 </body>
 </html>
