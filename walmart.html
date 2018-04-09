@@ -61,11 +61,12 @@
             var limit = Math.floor(Math.random() * 25);
             var i = 0;
             var id = setInterval(function () {
-                $('#lucky-circle').css('background-color', colors[i % colors.length]);
+                var circle = $('#lucky-circle');
+                circle.css('background-color', colors[i % colors.length]);
                 i++;
                 if (i === limit) {
                     clearInterval(id);
-                    $('#lucky-circle').css('background-color', colors[finalColor]);
+                    circle.css('background-color', colors[finalColor]);
                     $('#final-price').html('$' + finalPrice.toFixed(2));
                 }
             }, 300);
