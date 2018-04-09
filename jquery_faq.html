@@ -36,6 +36,28 @@
     <dt>National Parks stuff:</dt>
     <dd class="invisible">Fact 10 about national parks</dd>
 </dl>
+<h3>Yellowstone</h3>
+<ul>
+    <li>It's Yellow</li>
+    <li>Water is there</li>
+    <li>There's also some trees</li>
+    <li>And animals.</li>
+</ul>
+<h3>Bluestone</h3>
+<ul>
+    <li>It's Blue</li>
+    <li>Water is there</li>
+    <li>There's also some trees</li>
+    <li>And animals.</li>
+</ul>
+<h3>Greenstone</h3>
+<ul>
+    <li>It's Green</li>
+    <li>Water is there</li>
+    <li>There's also some trees</li>
+    <li>And animals.</li>
+</ul>
+<button class="yellow">Make some yellow stuff happen.</button>
 <script src="js/jquery.js"></script>
 <script>
     $(".me").click(function (e) {
@@ -44,6 +66,23 @@
     });
     $("dt").click(function () {
         $(this).toggleClass("high")
+    });
+
+    $(".yellow").click(function (e) {
+        e.preventDefault();
+        $("ul").each(function () {
+            $(this).children().last().css("background-color", "yellow")
+        })
+    });
+
+    $("h3").click(function(e) {
+        e.preventDefault();
+        $(this).next().children().css("font-weight", "bold")
+    });
+
+    $("li").click(function (e) {
+        e.preventDefault();
+        $(this).parent().children().first().css("color", "blue")
     })
 </script>
 </body>
