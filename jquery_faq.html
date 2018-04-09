@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jquery1.css">
     <style>
         .invisible {
@@ -14,14 +15,17 @@
     </style>
 </head>
 <body>
-<h1 style="text-align: center">jQuery Traversing</h1>
-<div class="wrapper">
-    <div class="frame"></div>
-    <div class="frame"></div>
-    <div class="frame"></div>
+<div class="first">
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span>x</span>
 </div>
-<br>
-    <button class="me">Hide some of the things!</button>
+<div class="alert alert-warning" role="alert">
+    <h2>Would you like to register for our site?</h2>
+    <button>Yes</button>
+    <button>No</button>
+</div>
+
+<button class="me">Hide some of the things!</button>
 <dl>
     <dt>National Parks stuff:</dt>
     <dd class="invisible">Fact 1 about national parks</dd>
@@ -66,6 +70,7 @@
     <li>And animals.</li>
 </ul>
 <button class="yellow">Make some yellow stuff happen.</button>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/jquery.js"></script>
 <script>
     $(".me").click(function (e) {
@@ -85,13 +90,24 @@
 
     $("h3").click(function(e) {
         e.preventDefault();
-        $(this).next().children().css("font-weight", "bold")
+        $(this).next().children().css("font-weight", "bold");
+        $(this).next().slideToggle();
     });
 
     $("li").click(function (e) {
         e.preventDefault();
         $(this).parent().children().first().css("color", "blue")
-    })
+    });
+
+    $("span").click(function () {
+        $(this).parent().hide();
+    });
+
+    $("ul").hide();
+    $("h2").parent().hide();
+    setTimeout(function () {
+        $("h2").parent().fadeIn();
+    }, 3000);
 </script>
 </body>
 </html>
