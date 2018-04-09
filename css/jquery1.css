@@ -1,0 +1,33 @@
+.frame {
+    height: 315px;
+    width: 30%;
+    border: 4px solid blue;
+    margin: 1px;
+    float: left;
+}
+.wrapper {
+    width: 100%;
+}
+.me {
+    margin-top:10rem;
+    margin-bottom: 2rem;
+}
+.but1 {
+    text-align: center;
+    width: 30%;
+    float: left;
+    margin: 1px;
+}
+.but2 {
+    text-align: center;
+    width: 30%;
+    float: left;
+    margin: 1px;
+}
+.but3 {
+    text-align: center;
+    width: 30%;
+    float: left;
+    margin: 1px;
+}
+
