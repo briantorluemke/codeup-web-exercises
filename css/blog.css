@@ -1,0 +1,16 @@
+.post {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid white;
+    padding: 10px;
+}
+#main {
+    text-align: center;
+}
+
+h3, h4, h5, p {
+    color: white;
+}
+body {
+    background-color: #A99F7A;
+}

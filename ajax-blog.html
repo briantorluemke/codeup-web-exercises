@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>yeah its my blog waddup</title>
+    <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
-<h1></h1>
+<h1 id="main">Welcome to my Blog!</h1>
 <div id="posts">
 
 </div>
@@ -21,15 +22,30 @@
     request.done(function(response){
         response.forEach(function (post) {
             myposts.append(
-                "<h3>*" + post.date + "*</h3>" +
+                "<div class='post'><h3>*" + post.date + "*</h3>" +
                 "<p><em>What's talked about in this post:</em></p>"
-                + "-" + post.categories +
-                "<h4>" + post.title + ":</h4>" +
-                "<h5>" + post.content + "</h5><br>")
+                + "<p>-" + post.categories +
+                "</p><h4>" + post.title + ":</h4>" +
+                "<h5>" + post.content + "</h5></div><br>");
         });
-    })
+        $(".post").each(function (){
+            var color = '#'; // hexadecimal starting symbol
+            var letters = ['6A8774','182B45','4F627C','6A8774','787A3E','7E5287','2B192F','471F37','26403F']; //Set your colors here
+            color += letters[Math.floor(Math.random() * letters.length)];
+            (this).style.background = color;
+        });
+    });
+
 
 
 </script>
 </body>
 </html>
+
+<!--<div class='post'>-->
+    <!--<h3>  </h3>-->
+    <!--<p>  <em>  </em>  </p>-->
+    <!--<h4>  </h4>-->
+    <!--<h5>  </h5>-->
+    <!--</div>-->
+<!--<br>-->
