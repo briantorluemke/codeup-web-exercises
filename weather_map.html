@@ -181,8 +181,9 @@
     geocoder.geocode(address, callback);
 
     $("#citysearch").click(function () {
+        var city = $("#city");
         address = {
-            address: $("#city").val()
+            address: city.val()
         };
         var c1 = $("#card1");
         var c2 = $("#card2");
@@ -191,7 +192,7 @@
         c2.empty();
         c3.empty();
         $("#cityname").empty();
-        var cityName = $("#city").val(),
+        var cityName = city.val(),
         request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
             q: cityName,
