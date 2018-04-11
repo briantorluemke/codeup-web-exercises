@@ -7,3 +7,7 @@ body {
     background-color: #A2DCFF;
     margin-left: 15px;
 }
+.form-group {
+    width: 80%;
+    margin: 0 auto;
+}

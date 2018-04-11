@@ -27,17 +27,33 @@
     </div>
 
 </div>
-
+<br>
+<div class="form-group">
+    <label for="lat">Latitude:</label>
+    <input type="number" class="form-control" id="lat">
+</div>
+<div class="form-group">
+    <label for="lon">Longitude:</label>
+    <input type="number" class="form-control" id="lon">
+    <br>
+    <input class="btn btn-primary" type="submit" value="Submit">
+</div>
+<input class="btn btn-primary" type="submit" value="Submit">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
     var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
-            q:     "San Antonio",
+            lat:    29.423017,
+            lon:   -98.48527,
             units: "imperial",
             cnt: 3
         });
+    request.fail(function(request, status, error){
+        console.log(status);
+        console.log(error);
+    });
     request.done(function (response) {
         console.log(response);
         $("#cityname").text(response.city.name);
@@ -75,7 +91,6 @@
             "</p><p><strong>Pressure: </strong>" + response.list[2].pressure
         )
     });
-
 </script>
 </body>
 </html>
