@@ -28,6 +28,11 @@
 
 </div>
 <br>
+
+<!--Map-->
+<div id="map-canvas"></div>
+
+<!--User inputs-->
 <div class="form-group">
     <label for="lat">Latitude:</label>
     <input type="number" class="form-control" id="lat">
@@ -36,12 +41,12 @@
     <label for="lon">Longitude:</label>
     <input type="number" class="form-control" id="lon">
     <br>
-    <input class="btn btn-primary" type="submit" value="Submit">
+    <button class="btn btn-primary" id="searchplace">Search!</button>
 </div>
-<input class="btn btn-primary" type="submit" value="Submit">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDav930EJ-IgdQ1VmvdbOlmU2QulAJmXK4"></script>
 <script>
     var request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
@@ -50,11 +55,18 @@
             units: "imperial",
             cnt: 3
         });
+
     request.fail(function(request, status, error){
         console.log(status);
         console.log(error);
     });
+
     request.done(function (response) {
+        mainFunction(response);
+    });
+
+    // function to decorate each card with information
+    function mainFunction(response) {
         console.log(response);
         $("#cityname").text(response.city.name);
         $("#card1").append(
@@ -89,8 +101,56 @@
             "</p>" + "<p><strong>Humidity: </strong>" + response.list[2].humidity +
             "</p><p><strong>Wind: </strong>" + response.list[2].speed +
             "</p><p><strong>Pressure: </strong>" + response.list[2].pressure
-        )
+        );
+
+    }
+
+    $("#searchplace").click(function() {
+        var lon = $("#lon").val();
+        var lat = $("#lat").val();
+        console.log(lat);
+        console.log(lon);
+        request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+            APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+            lat: lat,
+            lon: lon,
+            units: "imperial",
+            cnt: 3
+        });
+        $("#card1").empty();
+        $("#card2").empty();
+        $("#card3").empty();
+        request.done(function (response) {
+            mainFunction(response);
+        });
     });
+
+    var mapOptions = {
+        zoom: 17,
+        center : {
+            lat: 29.426791,
+            lng: -98.489602
+        }
+    };
+    var mapCanvas = document.getElementById("map-canvas");
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var geocoder = new google.maps.Geocoder();
+    var address = {
+        address: "San Antonio, TX"
+    };
+    function callback(results, status) {
+        if (status === google.maps.GeocoderStatus.OK) {
+            console.log(results);
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                position: results[0].geometry.location,
+                map: map
+            });
+        } else {
+            alert("Geocoding was not successful - STATUS: " + status);
+        }
+    }
+    geocoder.geocode(address, callback);
 </script>
 </body>
 </html>
