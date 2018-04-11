@@ -31,17 +31,25 @@
 
 <!--Map-->
 <div id="map-canvas"></div>
-
+<br>
 <!--User inputs-->
+<!--<div class="form-group">-->
+    <!--<label for="lat">Latitude:</label>-->
+    <!--<input type="number" class="form-control" id="lat">-->
+<!--</div>-->
+<!--<div class="form-group">-->
+    <!--<label for="lon">Longitude:</label>-->
+    <!--<input type="number" class="form-control" id="lon">-->
+    <!--<br>-->
+    <!--<button class="btn btn-primary" id="searchplace">Search!</button>-->
+<!--</div>-->
+
+<!--Input for city-->
 <div class="form-group">
-    <label for="lat">Latitude:</label>
-    <input type="number" class="form-control" id="lat">
-</div>
-<div class="form-group">
-    <label for="lon">Longitude:</label>
-    <input type="number" class="form-control" id="lon">
+    <label for="city">City:</label>
+    <input type="text" class="form-control" id="city">
     <br>
-    <button class="btn btn-primary" id="searchplace">Search!</button>
+    <button class="btn btn-primary" id="citysearch">Search!</button>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -126,7 +134,7 @@
     });
 
     var mapOptions = {
-        zoom: 17,
+        zoom: 5,
         center : {
             lat: 29.426791,
             lng: -98.489602
@@ -162,9 +170,6 @@
                     units: "imperial",
                     cnt: 3
                 });
-                c1.empty();
-                c2.empty();
-                c3.empty();
                 request.done(function (response) {
                     mainFunction(response);
                 })});
@@ -174,6 +179,31 @@
         }
     }
     geocoder.geocode(address, callback);
+
+    $("#citysearch").click(function () {
+        address = {
+            address: $("#city").val()
+        };
+        var c1 = $("#card1");
+        var c2 = $("#card2");
+        var c3 = $("#card3");
+        c1.empty();
+        c2.empty();
+        c3.empty();
+        $("#cityname").empty();
+        var cityName = $("#city").val(),
+        request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+            APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
+            q: cityName,
+            units: "imperial",
+            cnt: 3
+        });
+        request.done(function (response) {
+            mainFunction(response);
+        });
+        geocoder.geocode(address, callback);
+        console.log(address);
+    })
 
 </script>
 </body>
