@@ -19,6 +19,11 @@
 
     var myposts = $("#posts");
 
+    request.fail(function(request, status, error){
+        console.log(status);
+        console.log(error);
+    });
+
     request.done(function(response){
         response.forEach(function (post) {
             myposts.append(
@@ -36,16 +41,15 @@
         });
     });
 
-
+    // <div class='post'>
+    //     <h3>  </h3>
+    //     <p>  <em>  </em>  </p>
+    // <h4>  </h4>
+    // <h5>  </h5>
+    // </div>
+    // <br>
 
 </script>
 </body>
 </html>
 
-<!--<div class='post'>-->
-    <!--<h3>  </h3>-->
-    <!--<p>  <em>  </em>  </p>-->
-    <!--<h4>  </h4>-->
-    <!--<h5>  </h5>-->
-    <!--</div>-->
-<!--<br>-->
