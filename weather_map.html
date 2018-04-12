@@ -10,8 +10,19 @@
 <br>
 <h2>Weather Application</h2>
 <br>
-<h3 id="cityname"></h3>
-<br>
+<h4 id="cityname"></h4>
+<h2 id="popnum"></h2>
+<div class="row">
+    <div class="col">
+        <h2>Today</h2>
+    </div>
+    <div class="col">
+        <h2>Tomorrow</h2>
+    </div>
+    <div class="col">
+        <h2>3 Days From Today</h2>
+    </div>
+</div>
 <div class="card-group">
 
     <div class="card" id="card1">
@@ -75,8 +86,8 @@
 
     // function to decorate each card with information
     function mainFunction(response) {
-        console.log(response);
         $("#cityname").text(response.city.name);
+        $("#popnum").html("<h5>Population: </h5><h5>" + response.city.population + "</h5>");
         $("#card1").append(
             "<div class='card-body'><h4>" +
             response.list[0].temp.min + "\xB0" +
@@ -116,8 +127,6 @@
     $("#searchplace").click(function() {
         var lon = $("#lon").val();
         var lat = $("#lat").val();
-        console.log(lat);
-        console.log(lon);
         request = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
             APPID: "8f32c0149a278cdb5f995fbb3d98eba5",
             lat: lat,
@@ -173,7 +182,6 @@
                 request.done(function (response) {
                     mainFunction(response);
                 })});
-            console.log(marker);
         } else {
             alert("Geocoding was not successful - STATUS: " + status);
         }
@@ -203,7 +211,6 @@
             mainFunction(response);
         });
         geocoder.geocode(address, callback);
-        console.log(address);
     })
 
 </script>
