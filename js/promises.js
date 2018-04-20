@@ -12,7 +12,6 @@ function wait(number) {
     return promise;
 }
 
-console.log(wait(2000));
 
 
 
@@ -21,10 +20,16 @@ function userCommits(username) {
     githubPromise
         .then((response) => response.json())
         .then(users => {
-            console.log(`${username}'s last commit was ${users[0].created_at}`);
-        })
+            $(".here").text(`${username}'s last commit was ${users[0].created_at}`);
+        });
 }
-const name = "briantorluemke";
-userCommits("briantorluemke");
+
+$("button").click(function () {
+   const value = $("input").val();
+   userCommits(value);
+});
+
+
+
 
 
