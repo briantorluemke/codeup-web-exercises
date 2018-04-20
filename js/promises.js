@@ -15,21 +15,9 @@ function wait(number) {
 console.log(wait(2000));
 
 
-const promiseRequest = fetch('https://api.github.com/users', {headers: {'Authorization' : 'token 7bb7c46087c4b85aef7c35a8d7e87a283e42256e'}});
-promiseRequest
-    .then((response) => response.json())
-    .then(users => {
-        console.log(users);
-    });
-
-
-
-
-
-
 
 function userCommits(username) {
-    const githubPromise = fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization' : 'token 7bb7c46087c4b85aef7c35a8d7e87a283e42256e'}});
+    const githubPromise = fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization' : 'YOUR_TOKEN_HERE'}});
     githubPromise
         .then((response) => response.json())
         .then(users => {
@@ -37,6 +25,6 @@ function userCommits(username) {
         })
 }
 const name = "briantorluemke";
-userCommits(name);
+userCommits("briantorluemke");
 
 
